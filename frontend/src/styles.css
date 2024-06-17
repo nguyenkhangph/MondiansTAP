@@ -1,0 +1,19 @@
+/* Additional styles for spins and leaderboard */
+.spin-display,
+.leaderboard,
+.spin-button {
+    margin-top: 20px;
+}
+
+.leaderboard li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.spin-button {
+    background-color: #28a745;
+}
+
+.spin-button:hover {
+    background-color: #218838;
+}
