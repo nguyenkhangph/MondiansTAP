@@ -1,4 +1,4 @@
-// src/types/telegram-web-app.d.ts
+// telegram-web-app.d.ts
 export {};
 
 declare global {
@@ -8,6 +8,7 @@ declare global {
         close: () => void;
         ready: () => void;
         onEvent: (event: string, callback: () => void) => void;
+        sendData: (data: string) => void;  // Adding sendData method
       };
     };
   }
