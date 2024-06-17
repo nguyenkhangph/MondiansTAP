@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mondians Tap</title>
-    <!-- Include Telegram Web App SDK -->
+    <title>Mondians TAP Game</ditle>
+    <link rel="stylesheet" href="/styles.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
-
 <body>
     <div id="root"></div>
+    <!-- Optional: If you want to mix raw HTML and React, you can have other containers managed directly by HTML/JS outside React -->
+    <div class="container" style="display: none;"> <!-- This can be hidden or shown based on what you manage via React -->
+        <h1>Mondians TAP Game</h1>
+        <div class="coin-counter" id="coin-counter">Coins: 0</div>
+        <div class="spin-counter" id="spin-counter">Spins: 0</div>
+        <div class="tap-area" id="tap-area">
+            <img src="frontend\public\coin.png" alt="Tap to earn coins">
+        </div>
+        <button class="redeem-spins" id="redeem-spins">Redeem Spins</button>
+    </div>
+    <script type="module" src="/src/main.tsx"></script> <!-- Make sure this path is correct -->
 </body>
-
 </html>
