@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: 'C:/Users/pnkha/MondiansTAP/frontend/public/index.html'  
+      input: 'frontend\public\index.html'  
     }
   }
 });
