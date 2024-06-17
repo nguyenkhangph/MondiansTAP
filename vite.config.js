@@ -8,13 +8,14 @@ export default defineConfig({
   base: '/MondiansTAP/', // Adjust if your GitHub Pages path is different
   build: {
     outDir: 'dist',
+    assetsDir: 'assets', // Explicitly specify an assets directory
     rollupOptions: {
-      input: path.resolve(__dirname, 'frontend', 'public', 'index.html')  // Correct path using path.resolve
+      input: path.resolve(__dirname, 'frontend', 'public', 'index.html') // Ensure correct HTML input
     }
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'frontend', 'src')
+      '@': path.resolve(__dirname, 'frontend', 'src'),
     }
   }
 });

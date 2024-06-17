@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Mondians TAP Game</title>
     <!-- Include Telegram Web App SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script type="module" src="/frontend/src/main.jsx"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMU6z6D5Tf6yzgE0Q3jNkUrpSyj3/mFliqlP6Vp" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,8 +53,14 @@
             border-radius: 5px;
             background-color: #007BFF;
             color: white;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
+  <script type="module" crossorigin src="/MondiansTAP/assets/index-E2MVqSBL.js"></script>
+  <link rel="stylesheet" crossorigin href="/MondiansTAP/assets/index-z7XYCkwb.css">
 </head>
 <body>
     <div id="root"></div> <!-- React's root div -->
@@ -69,14 +72,12 @@
             <img src="frontend/public/coin.png" alt="Tap to earn coins">
         </div>
         <div class="spin-area" id="spin-area">
-            <img src="frontend/public/coin.png" alt="Click to spin">
+            <img src="frontend/public/spin.png" alt="Click to spin">
         </div>
         <button class="button" id="redeem-spins">Redeem Spins</button>
         <button class="button" id="get-user-data">Get User Data</button>
     </div>
 
-    <!-- Updated script path -->
-    <script type="module" src="/assets/index-E2MVqSBL.js"></script>
-
+    <!-- Updated script path -->
 </body>
 </html>

@@ -8,7 +8,7 @@ declare global {
         close: () => void;
         ready: () => void;
         onEvent: (event: string, callback: () => void) => void;
-        sendData: (data: string) => void;  // Adding sendData method
+        sendData: (data: string) => void;  // Ensure this method is supported by the Telegram API you're using
       };
     };
   }
