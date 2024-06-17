@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -8,14 +7,15 @@ export default defineConfig({
   base: '/MondiansTAP/', // Adjust if your GitHub Pages path is different
   build: {
     outDir: 'dist',
-    assetsDir: 'assets', // Explicitly specify an assets directory
+    assetsDir: 'assets',
     rollupOptions: {
-      input: path.resolve(__dirname, 'frontend', 'public', 'index.html') // Ensure correct HTML input
+      input: path.resolve(__dirname, 'frontend', 'public', 'index.html'),
+      external: ['/assets/index-E2MVqSBL.js']  // Externalizing the specific asset
     }
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'frontend', 'src'),
+      '@': path.resolve(__dirname, 'frontend', 'src')
     }
   }
 });
