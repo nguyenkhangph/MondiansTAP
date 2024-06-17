@@ -1,5 +1,5 @@
 {
-  "name": "my_first_contract",
+  "name": "MondiansTAP",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "compile": "ts-node ./scripts/compile.ts",
-    "test": "mocha",
+    "test": "mocha --require ts-node/register 'tests/**/*.ts'",
     "deploy": "ts-node ./scripts/deploy.ts",
     "dev": "vite",
     "build": "vite build",
