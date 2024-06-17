@@ -60,6 +60,21 @@
 </head>
 <body>
     <div id="root"></div> <!-- React's root div -->
+    <div class="container">
+        <h1>Mondians TAP Game</h1>
+        <div class="counter" id="coin-counter">Coins: 0</div>
+        <div class="counter" id="spin-counter">Spins: 0</div>
+        <div class="tap-area" id="tap-area">
+            <img src="frontend/public/coin.png" alt="Tap to earn coins">
+        </div>
+        <div class="spin-area" id="spin-area">
+            <img src="frontend/public/coin.png" alt="Click to spin">
+        </div>
+        <button class="button" id="redeem-spins">Redeem Spins</button>
+        <button class="button" id="get-user-data">Get User Data</button>
+    </div>
+
+    <!-- Updated script path -->
+    <script type="module" src="/frontend/src/main.jsx"></script>
 </body>
-<script type="module" src="/dist/assets/index.js"></script> <!-- Update the path based on Vite's output -->
 </html>
