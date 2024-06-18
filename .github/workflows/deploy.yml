@@ -3,19 +3,19 @@ name: Build and Deploy to GitHub Pages
 on: 
   push: 
     branches: 
-      - main  # Set this to your default branch 
+      - main  # Ensures it only runs on pushes to main branch
 
 jobs: 
   build-and-deploy: 
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest  # This is fine as it's a widely supported runner
     steps: 
     - name: Checkout Code 
       uses: actions/checkout@v2 
 
     - name: Set up Node.js 
-      uses: actions/setup-node@v2 
+      uses: actions/setup-node@v3  # Updated to the latest version
       with: 
-        node-version: '14'  # Set this to your Node.js version 
+        node-version: '14'  # Match this with your local development version
 
     - name: Install Dependencies 
       run: npm install 
@@ -23,8 +23,8 @@ jobs:
     - name: Build 
       run: npm run build 
 
-    - name: Deploy to GitHub Pages 
-      uses: peaceiris/actions-gh-pages@v3 
+    - name: Deploy to GitHub sat 
+      uses: peaceiris/actions-gh-pages@v3  # Ensure this is the latest stable version
       with: 
-        github_token: ${{ secrets.GH_TOKEN }}  # Use the custom token
-        publish_dir: ./dist  # Ensure this directory is the output of your build command
+        github_token: ${{ secrets.GH_TOKEN }}  # Correctly refer to your GitHub token secret
+        publish_dir: ./dist  # Make sure this matches your actual build output directory

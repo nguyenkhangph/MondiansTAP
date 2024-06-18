@@ -10,7 +10,7 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       input: path.resolve(__dirname, 'frontend', 'public', 'index.html'),
-      external: ['/assets/index-E2MVqSBL.js']  // Externalizing the specific asset
+      external: ['/assets/index-BSgbkUsN.js']  // Externalizing the specific asset
     }
   },
   resolve: {
